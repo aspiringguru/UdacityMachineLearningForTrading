@@ -1,3 +1,9 @@
+"""
+this code originally by gill.moni.
+https://discussions.udacity.com/t/stock-data-in-csv/157369/4
+minor mods for usability by AspiringGuru
+NB: can also retrieve stock data from google finance. See my other repos here on github.
+"""
 import urllib
 import os 
 
@@ -25,9 +31,8 @@ def fetch_data(symbol): #Not in course. Adding (mgill)
 def test_run():
     # Choose stock symbols to read
     #symbols = ['XLY', 'XLF','XLU','XLP','XLE','XLV','XLB','XLK','XLI']
-    symbols = ['AAPL', 'SPY']
+    symbols = ['AAPL', 'SPY', 'IBM']
     for symbol in symbols:
        fetch_data(symbol) #Download csv for symbol loading.
 
-#fetch_data("IBM")
 test_run()
