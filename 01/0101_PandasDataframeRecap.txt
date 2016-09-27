@@ -1,0 +1,12 @@
+Lesson outline
+Here's an overview of what you'll learn to do in this lesson. Documentation links are for reference.
+
+Read in multiple stocks:
+Create an empty pandas.DataFrame with dates as index: pandas.date_range
+Drop missing date rows: pandas.DataFrame.dropna
+Incrementally join data for each stock: pandas.DataFrame.join
+Manipulate stock data:
+Index and select data by row (dates) and column (symbols)
+Plot multiple stocks at once (still using pandas.DataFrame.plot)
+Carry out arithmetic operations across stocks
+Hit Next to continue.
