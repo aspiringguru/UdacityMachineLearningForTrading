@@ -27,7 +27,7 @@ def fetch_data(symbol): #Not in course. Adding (mgill)
     print "DEBUG: Downloading for "+symbol
     print "DEBUG: URL:"+url
 
-
+"""
 def test_run():
     # Choose stock symbols to read
     #symbols = ['XLY', 'XLF','XLU','XLP','XLE','XLV','XLB','XLK','XLI']
@@ -36,3 +36,6 @@ def test_run():
        fetch_data(symbol) #Download csv for symbol loading.
 
 test_run()
+"""
+#fetch_data("GOOG")
+fetch_data("GLD")
