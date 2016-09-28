@@ -1,7 +1,7 @@
 """
 Utility functions
-from week 1 quiz 'Utility functions for reading data'
-https://classroom.udacity.com/courses/ud501/lessons/3975568860/concepts/41007385930923
+from week 1 quiz 'More slicing'
+https://classroom.udacity.com/courses/ud501/lessons/3975568860/concepts/41007385960923
 """
 import os
 import pandas as pd
@@ -36,15 +36,25 @@ def get_data(symbols, dates):
 
 def test_run():
     # Define a date range
-    dates = pd.date_range('2010-01-22', '2010-01-26')
+    dates = pd.date_range('2010-01-01', '2010-12-31')
 
     # Choose stock symbols to read
     symbols = ['GOOG', 'IBM', 'GLD']
 
     # Get stock data
     df = get_data(symbols, dates)
-    print df
+
+    #slice by row range (dates) using DataFrame
+    #print df.ix['2010-01-01':'2010-01-15']#month of January
+    #http://pandas.pydata.org/pandas-docs/version/0.17.1/generated/pandas.DataFrame.ix.html
+    print "GOOG\n", df['GOOG'].head(4)
+    print "GOOG\n", df[['GOOG', 'SPY']].head(4)
+    print "slice by date range '2010-01-01':'2010-01-15' and stocks 'GOOG', 'SPY' "
+    print df.ix['2010-01-01':'2010-01-15', ['GOOG', 'SPY']]
 
 
 if __name__ == "__main__":
     test_run()
+
+
+#http://pandas.pydata.org/pandas-docs/stable/indexing.html
