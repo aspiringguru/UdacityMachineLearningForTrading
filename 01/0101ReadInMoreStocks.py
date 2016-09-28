@@ -36,7 +36,7 @@ for symbol in symbols:
     print "csv file read"
     print "df_temp.columns.values.tolist()=", df_temp.columns.values.tolist()
 
-    df_temp = df_temp.rename(columns = {'Adj Close':symbol}) #why is this not renaming the columne
+    df_temp = df_temp.rename(columns = {'Adj Close':symbol})
 
     print "after col rename, df_temp.columns.values.tolist()=", df_temp.columns.values.tolist()
     df1 = df1.join(df_temp)
